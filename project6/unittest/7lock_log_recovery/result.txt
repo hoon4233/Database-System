@@ -1,0 +1,170 @@
+Init log_buff succ
+After init_buf, global lsn : 0, prev lsn : 0
+in init recovM : 0 0x0
+Init recoveryM succ
+IN alloc_new_id, tableM name DATA1, idx : 0, id :1
+Original tree
+4 | 
+2 | 6 8 | 
+0[a] 1[a] | 2[a] 3[a] | 4[a] 5[a] | 6[6] 7[7] | 8[8] 9[9] | 
+Table Num : 1
+IN lock_acq, lock_mode : 1
+IN lock_acq, lock_mode : 1
+IN lock_acq, lock_mode : 1
+IN lock_acq, lock_mode : 1
+IN lock_acq, lock_mode : 1
+IN lock_acq, lock_mode : 1
+IN lock_acq, lock_mode : 1
+After update tree tree
+4 | 
+2 | 6 8 | 
+0[a] 1[a] | 2[a] 3[a] | 4[a] 5[a] | 6[a] 7[7] | 8[8] 9[9] | 
+
+REDO START
+1st recovM block, id : 1, winner type : 0, last_LSN : 920
+2st recovM block, id : 2, winner type : 0, last_LSN : 1208
+3st recovM block, id : 3, winner type : 0, last_LSN : 1552
+4st recovM block, id : 4, winner type : 0, last_LSN : 1840
+
+1st redo entry log_size : 28, LSN : 0, prev_LSN : -1, trx_id : 1, type : 0  
+2st redo entry log_size : 288, LSN : 28, prev_LSN : 0, trx_id : 1, type : 1  
+2st redo entry tid : 1, pag_num: 100, offset : 136, data_length : 120, old_img : a, new_img : a  
+3st redo entry log_size : 28, LSN : 316, prev_LSN : -1, trx_id : 2, type : 0  
+4st redo entry log_size : 288, LSN : 344, prev_LSN : 316, trx_id : 2, type : 1  
+4st redo entry tid : 1, pag_num: 100, offset : 264, data_length : 120, old_img : a, new_img : a  
+5st redo entry log_size : 288, LSN : 632, prev_LSN : 344, trx_id : 2, type : 1  
+5st redo entry tid : 1, pag_num: 99, offset : 136, data_length : 120, old_img : a, new_img : a  
+6st redo entry log_size : 288, LSN : 920, prev_LSN : 28, trx_id : 1, type : 1  
+6st redo entry tid : 1, pag_num: 99, offset : 264, data_length : 120, old_img : a, new_img : a  
+7st redo entry log_size : 288, LSN : 1208, prev_LSN : 632, trx_id : 2, type : 1  
+7st redo entry tid : 1, pag_num: 97, offset : 136, data_length : 120, old_img : a, new_img : a  
+8st redo entry log_size : 28, LSN : 1496, prev_LSN : -1, trx_id : 3, type : 0  
+9st redo entry log_size : 28, LSN : 1524, prev_LSN : -1, trx_id : 4, type : 0  
+10st redo entry log_size : 288, LSN : 1552, prev_LSN : 1496, trx_id : 3, type : 1  
+10st redo entry tid : 1, pag_num: 97, offset : 264, data_length : 120, old_img : a, new_img : a  
+11st redo entry log_size : 288, LSN : 1840, prev_LSN : 1524, trx_id : 4, type : 1  
+11st redo entry tid : 1, pag_num: 96, offset : 136, data_length : 120, old_img : 6, new_img : a  
+
+recovM's undo entry is empty
+
+LSN : 0, BEGIN, trx_id : 1
+LSN : 28, CONSIDER_REDO, trx_id : 1
+LSN : 316, BEGIN, trx_id : 2
+LSN : 344, CONSIDER_REDO, trx_id : 2
+LSN : 632, CONSIDER_REDO, trx_id : 2
+LSN : 920, CONSIDER_REDO, trx_id : 1
+LSN : 1208, CONSIDER_REDO, trx_id : 2
+LSN : 1496, BEGIN, trx_id : 3
+LSN : 1524, BEGIN, trx_id : 4
+LSN : 1552, CONSIDER_REDO, trx_id : 3
+LSN : 1840, CONSIDER_REDO, trx_id : 4
+
+REDO END
+
+
+UNDO START
+1st recovM block, id : 1, winner type : 0, last_LSN : 920
+2st recovM block, id : 2, winner type : 0, last_LSN : 1208
+3st recovM block, id : 3, winner type : 0, last_LSN : 1552
+4st recovM block, id : 4, winner type : 0, last_LSN : 1840
+
+1st redo entry log_size : 28, LSN : 0, prev_LSN : -1, trx_id : 1, type : 0  
+2st redo entry log_size : 288, LSN : 28, prev_LSN : 0, trx_id : 1, type : 1  
+2st redo entry tid : 1, pag_num: 100, offset : 136, data_length : 120, old_img : a, new_img : a  
+3st redo entry log_size : 28, LSN : 316, prev_LSN : -1, trx_id : 2, type : 0  
+4st redo entry log_size : 288, LSN : 344, prev_LSN : 316, trx_id : 2, type : 1  
+4st redo entry tid : 1, pag_num: 100, offset : 264, data_length : 120, old_img : a, new_img : a  
+5st redo entry log_size : 288, LSN : 632, prev_LSN : 344, trx_id : 2, type : 1  
+5st redo entry tid : 1, pag_num: 99, offset : 136, data_length : 120, old_img : a, new_img : a  
+6st redo entry log_size : 288, LSN : 920, prev_LSN : 28, trx_id : 1, type : 1  
+6st redo entry tid : 1, pag_num: 99, offset : 264, data_length : 120, old_img : a, new_img : a  
+7st redo entry log_size : 288, LSN : 1208, prev_LSN : 632, trx_id : 2, type : 1  
+7st redo entry tid : 1, pag_num: 97, offset : 136, data_length : 120, old_img : a, new_img : a  
+8st redo entry log_size : 28, LSN : 1496, prev_LSN : -1, trx_id : 3, type : 0  
+9st redo entry log_size : 28, LSN : 1524, prev_LSN : -1, trx_id : 4, type : 0  
+10st redo entry log_size : 288, LSN : 1552, prev_LSN : 1496, trx_id : 3, type : 1  
+10st redo entry tid : 1, pag_num: 97, offset : 264, data_length : 120, old_img : a, new_img : a  
+11st redo entry log_size : 288, LSN : 1840, prev_LSN : 1524, trx_id : 4, type : 1  
+11st redo entry tid : 1, pag_num: 96, offset : 136, data_length : 120, old_img : 6, new_img : a  
+
+1st undo entry log_size : 288, LSN : 1840, prev_LSN : 1524, trx_id : 4, type : 1  
+1st undo entry tid : 1, pag_num: 96, offset : 136, data_length : 120, old_img : 6, new_img : a, next_nudo_LSN : 1002700911
+2st undo entry log_size : 288, LSN : 1552, prev_LSN : 1496, trx_id : 3, type : 1  
+2st undo entry tid : 1, pag_num: 97, offset : 264, data_length : 120, old_img : a, new_img : a, next_nudo_LSN : 1002700911
+3st undo entry log_size : 288, LSN : 1208, prev_LSN : 632, trx_id : 2, type : 1  
+3st undo entry tid : 1, pag_num: 97, offset : 136, data_length : 120, old_img : a, new_img : a, next_nudo_LSN : 1002700911
+4st undo entry log_size : 288, LSN : 920, prev_LSN : 28, trx_id : 1, type : 1  
+4st undo entry tid : 1, pag_num: 99, offset : 264, data_length : 120, old_img : a, new_img : a, next_nudo_LSN : 1002700911
+
+tmp_entry LSN : 1552, prev_LSN : 1496, trx_id : 3, type : 1
+tmp_entry LSN : 1208, prev_LSN : 632, trx_id : 2, type : 1
+tmp_entry LSN : 920, prev_LSN : 28, trx_id : 1, type : 1
+tmp_entry LSN : 632, prev_LSN : 344, trx_id : 2, type : 1
+tmp_entry LSN : 344, prev_LSN : 316, trx_id : 2, type : 1
+tmp_entry LSN : 28, prev_LSN : 0, trx_id : 1, type : 1
+
+UNDO END
+End recovery tree
+4 | 
+2 | 6 8 | 
+0[a] 1[a] | 2[a] 3[a] | 4[a] 5[a] | 6[6] 7[7] | 8[8] 9[9] | 
+START log_buff_read_all_file
+1st record log_size : 28, LSN : 0, prev_LSN : -1, trx_id : 1, type : 0  
+
+2st record log_size : 288, LSN : 28, prev_LSN : 0, trx_id : 1, type : 1  
+2st record tid : 1, pag_num: 100, offset : 136, data_length : 120, old_img : a, new_img : a  
+
+3st record log_size : 28, LSN : 316, prev_LSN : -1, trx_id : 2, type : 0  
+
+4st record log_size : 288, LSN : 344, prev_LSN : 316, trx_id : 2, type : 1  
+4st record tid : 1, pag_num: 100, offset : 264, data_length : 120, old_img : a, new_img : a  
+
+5st record log_size : 288, LSN : 632, prev_LSN : 344, trx_id : 2, type : 1  
+5st record tid : 1, pag_num: 99, offset : 136, data_length : 120, old_img : a, new_img : a  
+
+6st record log_size : 288, LSN : 920, prev_LSN : 28, trx_id : 1, type : 1  
+6st record tid : 1, pag_num: 99, offset : 264, data_length : 120, old_img : a, new_img : a  
+
+7st record log_size : 288, LSN : 1208, prev_LSN : 632, trx_id : 2, type : 1  
+7st record tid : 1, pag_num: 97, offset : 136, data_length : 120, old_img : a, new_img : a  
+
+8st record log_size : 28, LSN : 1496, prev_LSN : -1, trx_id : 3, type : 0  
+
+9st record log_size : 28, LSN : 1524, prev_LSN : -1, trx_id : 4, type : 0  
+
+10st record log_size : 288, LSN : 1552, prev_LSN : 1496, trx_id : 3, type : 1  
+10st record tid : 1, pag_num: 97, offset : 264, data_length : 120, old_img : a, new_img : a  
+
+11st record log_size : 288, LSN : 1840, prev_LSN : 1524, trx_id : 4, type : 1  
+11st record tid : 1, pag_num: 96, offset : 136, data_length : 120, old_img : 6, new_img : a  
+
+12st record log_size : 296, LSN : 2128, prev_LSN : 1840, trx_id : 4, type : 4  
+12st record tid : 1, page_num : 96, offset : 136, data_length : 120, old_img : a, new_img : 6, nex_undo LSN : -1  
+
+13st record log_size : 28, LSN : 2424, prev_LSN : 2128, trx_id : 4, type : 3  
+
+14st record log_size : 296, LSN : 2452, prev_LSN : 1552, trx_id : 3, type : 4  
+14st record tid : 1, page_num : 97, offset : 264, data_length : 120, old_img : a, new_img : a, nex_undo LSN : -1  
+
+15st record log_size : 28, LSN : 2748, prev_LSN : 2452, trx_id : 3, type : 3  
+
+16st record log_size : 296, LSN : 2776, prev_LSN : 1208, trx_id : 2, type : 4  
+16st record tid : 1, page_num : 97, offset : 136, data_length : 120, old_img : a, new_img : a, nex_undo LSN : 632  
+
+17st record log_size : 296, LSN : 3072, prev_LSN : 920, trx_id : 1, type : 4  
+17st record tid : 1, page_num : 99, offset : 264, data_length : 120, old_img : a, new_img : a, nex_undo LSN : 28  
+
+18st record log_size : 296, LSN : 3368, prev_LSN : 2776, trx_id : 2, type : 4  
+18st record tid : 1, page_num : 99, offset : 136, data_length : 120, old_img : a, new_img : a, nex_undo LSN : 344  
+
+19st record log_size : 296, LSN : 3664, prev_LSN : 3368, trx_id : 2, type : 4  
+19st record tid : 1, page_num : 100, offset : 264, data_length : 120, old_img : a, new_img : a, nex_undo LSN : -1  
+
+20st record log_size : 28, LSN : 3960, prev_LSN : 3664, trx_id : 2, type : 3  
+
+21st record log_size : 296, LSN : 3988, prev_LSN : 3072, trx_id : 1, type : 4  
+21st record tid : 1, page_num : 100, offset : 136, data_length : 120, old_img : a, new_img : a, nex_undo LSN : -1  
+
+22st record log_size : 28, LSN : 4284, prev_LSN : 3988, trx_id : 1, type : 3  
+
+END log_buff_read_all_file

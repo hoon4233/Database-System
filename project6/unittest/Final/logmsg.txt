@@ -1,0 +1,19 @@
+[ANALYSIS] Analysis pass start 
+[ANALYSIS] Analysis success. Winner:, Loser: 1 2 3 4
+[REDO] Redo pass start 
+LSN 28 [BEGIN] Transaction id 1 
+LSN 316 [UPDATE] Transaction id 1 redo apply 
+LSN 344 [BEGIN] Transaction id 2 
+LSN 632 [UPDATE] Transaction id 2 redo apply 
+LSN 920 [UPDATE] Transaction id 2 redo apply 
+LSN 1208 [UPDATE] Transaction id 1 redo apply 
+LSN 1496 [UPDATE] Transaction id 2 redo apply 
+LSN 1524 [BEGIN] Transaction id 3 
+LSN 1552 [BEGIN] Transaction id 4 
+LSN 1840 [UPDATE] Transaction id 3 redo apply 
+LSN 2128 [UPDATE] Transaction id 4 redo apply 
+[REDO] Redo pass end 
+[UNDO] Undo pass start 
+LSN 2128 [UPDATE] Transaction id 4 undo apply 
+LSN 1840 [UPDATE] Transaction id 3 undo apply 
+LSN 1496 [UPDATE] Transaction id 2 undo apply 

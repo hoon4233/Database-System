@@ -1,0 +1,5 @@
+make clean
+rm a.db
+rm b.db
+make
+./main a.db
