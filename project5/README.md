@@ -39,7 +39,7 @@ transaction들은 각각 자신의 lock object를 가지고 있습니다.
 ***API는 2장에서 설명하겠습니다.***
 ``` 
 
-![trxM](uploads/b00e96cc70c6cbbb8005ab114e3217c2/trxM.png)
+<img width="703" alt="5-1" src="https://user-images.githubusercontent.com/26400022/132084585-13aad962-c200-4528-99e2-55f7ffc30f27.png">
 
 <br/><br/>
 
@@ -57,7 +57,7 @@ project4에서 사용한 lock manager를 활용하였습니다.
 ***API는 2장에서 설명하겠습니다.***
 ```
 
-![lockM](uploads/2b4479ddc11afa6259f0170333cfde84/lockM.png)
+<img width="749" alt="5-2" src="https://user-images.githubusercontent.com/26400022/132084587-01dede65-59f9-4565-9059-5325cc604692.png">
 
 <br/><br/>
 
@@ -82,7 +82,7 @@ visit Manager는 active한 transation을 vertex로 갖고
 
 ***API는 2장에서 설명하겠습니다.***
 ```
-![graph](uploads/59f730162353b6e06ef9e6a7f242337a/graph.png)
+<img width="411" alt="5-3" src="https://user-images.githubusercontent.com/26400022/132084588-74cb1d43-16de-4c08-b08f-bace7f41efd7.png">
 
 <br/><br/>
 
@@ -304,7 +304,7 @@ db_find 함수의 변경으로 인해 db_insert 시 trx_abrot가 일어나지만
 10개의 trx들이 각각의 record에 대해 find를 합니다.
 ``` 
 
-![1](uploads/3a414e179ffd415bfd0cbdc99eebccb9/1.png)
+<img width="323" alt="5-4" src="https://user-images.githubusercontent.com/26400022/132084589-a76046fe-ea09-4998-8ba8-1da06a2ba3c6.png">
 
 
 ### 3-2. 두번째 시나리오
@@ -315,8 +315,8 @@ db_find 함수의 변경으로 인해 db_insert 시 trx_abrot가 일어나지만
 대기상태가 되고 이전에 sleep한 trx가 commit 한 이후에 동작하게 됩니다.
 ``` 
 
-![2-1](uploads/85d84d08f8e4f20da9fa1e370ea717f3/2-1.png)
-![2-2](uploads/07bc6af563610284b17a6453dc930f86/2-2.png)
+<img width="329" alt="5-5" src="https://user-images.githubusercontent.com/26400022/132084590-af8e33a2-699c-40e8-8ff3-1b8774ec01fc.png">
+<img width="371" alt="5-6" src="https://user-images.githubusercontent.com/26400022/132084591-7782e8f8-d883-4823-9ac4-eecc4bb46a28.png">
 
 ### 3-3. 세번째 시나리오
 ```
@@ -330,7 +330,7 @@ deadlock이 일어나는 상황을 가정한 뒤
 trx2가 abort 되며 roll_back이 제대로 수행되는지 확인하였습니다.
 ``` 
 
-![3](uploads/c87fdb176a0e7b08f42e200d7773950d/3.png)
+<img width="347" alt="5-1" src="https://user-images.githubusercontent.com/26400022/132084681-196cab90-276b-41ee-bb04-84d964e85f71.png">
 
 ### 3-4. 네번째 시나리오
 ```
@@ -342,8 +342,8 @@ deadlock 상황이 아니라 trx1이 수행되고 commit 된 뒤
 trx2가 임무를 수행하고 commit 하는 상황을 만들어보았습니다.
 ``` 
 
-![4-1](uploads/03d90a73b197955c7e81765ddeae7776/4-1.png)
-![4-2](uploads/3fa100a8365559030b09e72c903ecbf9/4-2.png)
+<img width="324" alt="5-2" src="https://user-images.githubusercontent.com/26400022/132084682-56603c80-840c-411a-9a55-3065b0e581bd.png">
+<img width="329" alt="5-3" src="https://user-images.githubusercontent.com/26400022/132084683-261bdbe3-833d-4800-9860-82bb9898e634.png">
 
 ### 3-5. 다섯번째 시나리오
 ```
@@ -354,7 +354,7 @@ deadlock 상황이 아니라 trx1이 제대로 수행되고
 이후 commit 되는지 확인하였습니다.
 ``` 
 
-![5](uploads/328c20c9ddc30e19b6700dc77ff2888b/5.png)
+<img width="339" alt="5-4" src="https://user-images.githubusercontent.com/26400022/132084684-7936ae1a-0b1d-457a-8701-0a295d1654c5.png">
 
 <br/><br/>
 

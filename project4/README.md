@@ -31,7 +31,7 @@ entry 마다 lock object가 생성되어 있는 예시입니다.
 ***entry와 object가 추가&삭제되는 과정은 2장에서 설명하겠습니다.***
 ``` 
 
-![design](uploads/02a8097875f446f4bfa28edc20cdfe16/design.png)
+![4-1](https://user-images.githubusercontent.com/26400022/132084491-0aa824a2-4abb-4f61-a9ff-cd96358a8f40.jpeg)
 
 <br/><br/>
 
@@ -273,7 +273,7 @@ table의 수와 record의 수가
 모두 hash table의 size보다 작을때 입니다.
 ``` 
 
-![3x5](uploads/6e76dd88048944dd4676cd7c84d6d9de/3x5.png)
+<img width="174" alt="4-2" src="https://user-images.githubusercontent.com/26400022/132084494-d8407afd-b327-42c2-81c4-296bad54c2ca.png">
 
 
 ### 3-2. Table_num = 12, Record_num = 5
@@ -282,7 +282,7 @@ table의 수는 hash table의 size보다 크고
 record의 수는 hash table의 size보다 작을때 입니다.
 ``` 
 
-![12x5](uploads/773351ae5acefaf5b4bf04f4177026bd/12x5.png)
+<img width="604" alt="4-3" src="https://user-images.githubusercontent.com/26400022/132084495-d767a502-1bd0-4733-82a5-153e513d48f9.png">
 
 ### 3-3. Table_num = 3, Record_num = 12
 ```
@@ -290,7 +290,7 @@ table의 수는 hash table의 size보다 작고
 record의 수는 hash table의 size보다 클때 입니다.
 ``` 
 
-![3x12](uploads/c435286a0eb4f8e8ceb0002a0c835d6f/3x12.png)
+<img width="345" alt="4-4" src="https://user-images.githubusercontent.com/26400022/132084496-17c3ba11-d58a-4c43-ad74-9627f2d05a41.png">
 
 ### 3-4. Table_num = 12, Record_num = 12
 ```
@@ -298,7 +298,7 @@ table의 수와 record의 수가
 모두 hash table의 size보다 클때 입니다.
 ``` 
 
-![12x12](uploads/144d3543090e63e48ac50308dc9b9b57/12x12.png)
+<img width="1031" alt="4-5" src="https://user-images.githubusercontent.com/26400022/132084497-60bd7e19-79b0-4393-bddc-c8ccb25ff4ca.png">
 
 ### 3-5. Transfer thread = 5, Scan thread = 3
 ```
@@ -307,7 +307,7 @@ Scanf thread는 3으로 했을때의 결과입니다.
 Table num은 3이고 Record num은 5입니다.
 ``` 
 
-![t5s3](uploads/caa131bc2398bf6e804ce4c3958719d1/t5s3.png)
+<img width="189" alt="4-6" src="https://user-images.githubusercontent.com/26400022/132084498-47d37757-b052-4703-b7df-e4947c7c8045.png">
 
 ### 3-6. Transfer thread = 11, Scan thread = 1
 ```
@@ -316,5 +316,5 @@ Scanf thread는 1으로 했을때의 결과입니다.
 Table num은 3이고 Record num은 5입니다.
 ``` 
 
-![t11s1](uploads/e6f6856023539b2f8a96578d48b75595/t11s1.png)
+<img width="171" alt="4-7" src="https://user-images.githubusercontent.com/26400022/132084499-59af869e-6304-4870-8889-972ee5a7ad87.png">
 

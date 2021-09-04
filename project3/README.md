@@ -36,7 +36,7 @@ Buffer Manager를 구현하며 추가된 buffer/table layer에 대해 설명합�
 ***전체적인 코드는 2장에서 설명하겠습니다.***
 ``` 
 
-![layered_arch](uploads/5fcc0eebd9fb581591ecb34d7e9ef71f/layered_arch.png)
+<img width="854" alt="3-1" src="https://user-images.githubusercontent.com/26400022/132084394-05e84f33-e536-4a9e-babe-b5dd5c410abf.png">
 
 <br/><br/>
 
@@ -284,7 +284,7 @@ expand file 시 늘어나는 page = 5
 이 가능한지 test 하였습니다.
 ``` 
 
-![multi_table](uploads/895b0c34cdbd568b3313de36ed366d0b/multi_table.png)
+<img width="243" alt="3-2" src="https://user-images.githubusercontent.com/26400022/132084396-fa417aca-8632-4779-a45a-a8d403359cf2.png">
 
 
 ### 3-2. Insert
@@ -298,7 +298,7 @@ file을 닫은 후 다시 열어 tree를 출력해봄으로서
 disk에 data가 제대로 저장되었는지 확인하였습니다.
 ``` 
 
-![insert](uploads/a557b74ec40b8d46a4a07683a1d92d51/insert.png)
+<img width="517" alt="3-3" src="https://user-images.githubusercontent.com/26400022/132084398-ebfd6dce-ff76-4716-87f3-0f2b369df601.png">
 
 ### 3-3. Find
 ```
@@ -311,7 +311,7 @@ table b에서 key 15가 갖는 value 값을
 db_find하여 출력하였습니다.
 ``` 
 
-![find](uploads/dae02ebef2d8e06b5f391bb587365a47/find.png)
+<img width="484" alt="3-4" src="https://user-images.githubusercontent.com/26400022/132084399-1e1b110b-77a5-46a6-ac9c-f4f1e6a95e91.png">
 
 ### 3-4. Delete
 #### 3-4-1 Delayed Merge
@@ -329,7 +329,7 @@ file을 닫은 후 다시 열어 tree를 출력해봄으로서
 disk에 data가 제대로 저장되었는지 확인하였습니다.
 ``` 
 
-![delete_delay_merge](uploads/93eef80e0f5093494fe0bc4a8258edf7/delete_delay_merge.png)
+<img width="513" alt="3-5" src="https://user-images.githubusercontent.com/26400022/132084400-0438a5c9-5613-4659-a38e-0ce1a51bb555.png">
 
 #### 3-4-2 redistribution
 ```
@@ -347,7 +347,7 @@ file을 닫은 후 다시 열어 tree를 출력해봄으로서
 disk에 data가 제대로 저장되었는지 확인하였습니다.
 ``` 
 
-![delete_redistribution](uploads/f5f87bb862e6a7194d89bc86bf0ba62d/delete_redistribution.png)
+<img width="510" alt="3-6" src="https://user-images.githubusercontent.com/26400022/132084401-632f0ec8-fe91-4254-a991-6ebec71cebc9.png">
 
 ### 3-5. LRU replacement policy
 ```
@@ -367,7 +367,7 @@ buffer에서 evict가 일어나야 합니다.
 victim page가 되고 replacement가 일어납니다.
 ``` 
 
-![LRU](uploads/29be69cf3f3b15aa19c732cd1fa68c84/LRU.png)
+<img width="282" alt="3-7" src="https://user-images.githubusercontent.com/26400022/132084404-77d55891-65e6-4c4c-81e0-c2b78f9bf430.png">
 
 ### 3-6. Close
 ```
@@ -382,7 +382,7 @@ close table을 이용해
 buffer에 있는 table 1d의 page를 모두 내린 상황입니다.
 ``` 
 
-![close](uploads/3aeb12741c6cb3d7c5f35a05085f824e/close.png)
+<img width="274" alt="3-8" src="https://user-images.githubusercontent.com/26400022/132084405-a01df152-a8f4-47ce-9059-94be560ab450.png">
 
 ### 3-7. Shutdown
 ```
@@ -394,7 +394,7 @@ shutdown_db를 통해 buffer와 table을 없애고
 1개의 record를 넣는 모습입니다.
 ``` 
 
-![shutdown](uploads/195b7b3783f12e6d7d8e563e009c8648/shutdown.png)
+<img width="273" alt="3-9" src="https://user-images.githubusercontent.com/26400022/132084406-fa2e8d80-c7d1-4ff9-9333-cd1de2919097.png">
 
 
 

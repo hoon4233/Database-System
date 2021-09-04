@@ -40,8 +40,8 @@ page와 lock manager의 lock을 풀고
 ***API는 2장에서 설명하겠습니다.***
 ``` 
 
-![스크린샷_2020-12-17_오후_10.13.12](uploads/d0617e35cbd599f9c487f93e5ab40f3b/스크린샷_2020-12-17_오후_10.13.12.png)
-![스크린샷_2020-12-17_오후_10.13.01](uploads/ddb44051ba9e6a5ccd262e8e9560c7c8/스크린샷_2020-12-17_오후_10.13.01.png)
+<img width="939" alt="6-1" src="https://user-images.githubusercontent.com/26400022/132084758-8ad9f4df-fc24-4928-839a-159051e6b2b0.png">
+<img width="930" alt="6-2" src="https://user-images.githubusercontent.com/26400022/132084763-4fc7f3f9-d951-4f99-8fd0-efb5d1017ea9.png">
 
 <br/><br/>
 
@@ -355,7 +355,7 @@ id
 4                                     b    u  com r
 ``` 
 
-![스크린샷_2020-12-17_오후_11.14.24](uploads/e17d164d9406991619aab7ef8c430e76/스크린샷_2020-12-17_오후_11.14.24.png)
+<img width="374" alt="6-3" src="https://user-images.githubusercontent.com/26400022/132084764-d1785a31-bba2-44f5-84d5-448a5aaf711a.png">
 
 ### 4-1. 상황2
 ```
@@ -367,7 +367,7 @@ id
 4                       b    u  
 ``` 
 
-![스크린샷_2020-12-17_오후_11.15.03](uploads/130c603f09ff43bdf38c212d857a5964/스크린샷_2020-12-17_오후_11.15.03.png)
+<img width="418" alt="6-4" src="https://user-images.githubusercontent.com/26400022/132084765-9fe20c05-bef4-472d-a51d-bee100bd77c1.png">
 
 ### 4-3. flag 1
 ```
@@ -375,7 +375,7 @@ init_db의 flag에 1을 log_num에 3을 준 상황입니다.
 analysis phase는 종료하고 3개의 log에 대해서만 redo 를 진행한 후 종료되는 모습입니다.
 ``` 
 
-![스크린샷_2020-12-17_오후_11.16.27](uploads/46f33d36b61f3b2eaeb0b34a95cb2ea6/스크린샷_2020-12-17_오후_11.16.27.png)
+<img width="374" alt="6-5" src="https://user-images.githubusercontent.com/26400022/132084766-1293a35a-2cd3-4299-be43-0578f11f9dc3.png">
 
 ### 4-4. flag 2
 ```
@@ -383,7 +383,7 @@ init_db의 flag에 2를 log_num에 3을 준 상황입니다.
 redo phase는 끝나고 3개의 log에 대해서만 undo 를 진행한 후 종료하는 모습입니다.
 ``` 
 
-![스크린샷_2020-12-17_오후_11.18.08](uploads/21c69a281ad6166edb83cc2407524871/스크린샷_2020-12-17_오후_11.18.08.png)
+<img width="444" alt="6-6" src="https://user-images.githubusercontent.com/26400022/132084767-4004c24a-8ab6-49bc-80fa-d83fd71fde1d.png">
 
 <br/><br/>
 
