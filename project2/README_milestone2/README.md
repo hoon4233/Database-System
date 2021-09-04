@@ -434,16 +434,15 @@ db_insert를 구현하기 위해 사용된 함수들입니다.<br/><br/>
 
 **실행 예시**
 
-![스크린샷_2020-10-17_오후_4.55.55](uploads/f4264af6c8a6ce047b84fc4b2160872d/스크린샷_2020-10-17_오후_4.55.55.png)<br/><br/>
-leaf page에 insert 되는 경우 입니다.<br/><br/>
+<img width="107" alt="2-1" src="https://user-images.githubusercontent.com/26400022/132084137-9c0c545c-cb4f-45a7-873a-37088405566b.png"><br/><br/>
 
-![스크린샷_2020-10-17_오후_4.56.06](uploads/be7f13db34b468b4e8b2d2932619d5e9/스크린샷_2020-10-17_오후_4.56.06.png)<br/><br/>
+<img width="179" alt="2-2" src="https://user-images.githubusercontent.com/26400022/132084167-a002d8c1-7f8a-4204-bee8-ad766307570c.png"><br/><br/>
 leaf page가 split 되는 경우 입니다.(internal page에 insert 되는 경우)<br/><br/>
 
-![스크린샷_2020-10-17_오후_4.56.30](uploads/e1e16c6b218ca24ada6aca652d983f87/스크린샷_2020-10-17_오후_4.56.30.png)<br/><br/>
+<img width="225" alt="2-3" src="https://user-images.githubusercontent.com/26400022/132084177-3c3bfd84-60a9-45e5-9397-b693c920c27e.png"><br/><br/>
 internal page에 insert 되는 경우 입니다.(leaf page가 split 되는 경우)<br/><br/>
 
-![스크린샷_2020-10-17_오후_4.57.27](uploads/4de986035ed28884ebbf4175761c455b/스크린샷_2020-10-17_오후_4.57.27.png)<br/><br/>
+<img width="482" alt="2-4" src="https://user-images.githubusercontent.com/26400022/132084203-fb84ab6a-df47-43aa-b590-bb1303666efd.png"><br/><br/>
 internal page가 split 되는 경우 입니다.<br/><br/>
 
 ### 3-3. Find
@@ -490,7 +489,7 @@ db_find를 구현하기 위해 사용된 함수들입니다.<br/><br/>
 
 **실행 예시**
 
-![스크린샷_2020-10-17_오후_4.58.03](uploads/1fc9bc74455f4604f79a7bef370d288c/스크린샷_2020-10-17_오후_4.58.03.png)<br/><br/>
+<img width="519" alt="2-5" src="https://user-images.githubusercontent.com/26400022/132084204-3e36dbfd-ea5b-4ba5-8c6a-50a104076602.png"><br/><br/>
 find의 실행 예시입니다.<br/><br/>
 
 ### 3-4. Delete
@@ -548,14 +547,14 @@ db_delete를 구현하기 위해 사용된 함수들입니다.<br/><br/>
 
 **실행 예시**
 
-![스크린샷_2020-10-17_오후_5.01.44](uploads/7e39363b172bd3fc9b7c8e34bdb65260/스크린샷_2020-10-17_오후_5.01.44.png)<br/><br/>
+<img width="521" alt="2-6" src="https://user-images.githubusercontent.com/26400022/132084205-cc65dec2-1d6d-4445-b538-b40e9b20b6bd.png"><br/><br/>
 leaf에서 삭제되는 경우입니다.<br/><br/>
 
-![스크린샷_2020-10-17_오후_5.01.53](uploads/ccc15521b4c28f27b6c2e544e59b301c/스크린샷_2020-10-17_오후_5.01.53.png)<br/><br/>
+<img width="444" alt="2-7" src="https://user-images.githubusercontent.com/26400022/132084206-77a9b2ff-56e6-460f-9244-673999f2a11c.png"><br/><br/>
 leaf가 모두 삭제되어 merge 되는 경우입니다.<br/><br/>
 
-![스크린샷_2020-10-17_오후_5.05.40](uploads/70f98057750a9d67f71e61692c505cc1/스크린샷_2020-10-17_오후_5.05.40.png)<br/><br/>
+<img width="289" alt="2-8" src="https://user-images.githubusercontent.com/26400022/132084207-6487bfb4-efed-4b56-864e-9a30cafbcfa5.png"><br/><br/>
 internal이 모두 삭제되고 neighbor와 merge 하는 경우 입니다.<br/><br/>
 
-![스크린샷_2020-10-17_오후_5.08.22](uploads/c0b3bb56bc4ee2faf97b97aed9fdb52e/스크린샷_2020-10-17_오후_5.08.22.png)<br/><br/>
+<img width="694" alt="2-9" src="https://user-images.githubusercontent.com/26400022/132084208-82fedbe8-71db-4bbe-aa1c-555370c73b59.png"><br/><br/>
 internal이 모두 삭제되었지만 neighbor가 가득차 merge를 하지 못하고 redistribution 하는 경우입니다.<br/><br/>
